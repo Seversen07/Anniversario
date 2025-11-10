@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Il nostro viaggio 💖</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body { margin: 0; font-family: 'Poppins', sans-serif; background: linear-gradient(180deg, #ffe5ec, #fff); color: #5a3a4e; text-align: center; overflow-x: hidden; }
+header { position: fixed; top: 0; left: 0; width: 100%; background: rgba(255, 245, 247, 0.9); box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 10; padding: 15px 0; backdrop-filter: blur(6px);}
+header h1 { font-family: 'Great Vibes', cursive; font-size: 2.3em; color: #ff4d7a; margin: 0; letter-spacing: 1px;}
+main { padding-top: 100px; }
+button { background-color: #ff8fab; color: white; border: none; padding: 15px 30px; font-size: 1.1em; border-radius: 30px; cursor: pointer; margin: 10px; transition: 0.3s; font-family: 'Poppins', sans-serif;}
+button:hover { background-color: #ffb3c6; transform: scale(1.05);}
+h2, h3 { font-family: 'Poppins', sans-serif; color: #e75480;}
+p { font-family: 'Poppins', sans-serif; font-size: 1.1em; max-width: 600px; margin: 10px auto; color: #5a3a4e;}
+.moment { display: none; margin-top: 40px; animation: fadeIn 1.5s ease-in; }
+.moment img, video { max-width: 300px; height: auto; border-radius: 15px; box-shadow: 0 0 10px #ffb3c6; margin-top: 15px; }
+#finale { display: none; margin-top: 40px; }
+.hearts { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; overflow: hidden; }
+.heart { position: absolute; bottom: -10px; color: #ff8fab; font-size: 20px; animation: floatUp 6s linear infinite; }
+.buttons-container { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin-top: 20px; }
+#finaleBtn { display: none; background-color: #ff6fa0; }
+.showFinaleBtn { display: inline-block !important; animation: fadeIn 2s ease-in; }
+#musicBtn { position: fixed; top: 70px; right: 20px; padding: 10px 15px; border: none; border-radius: 20px; background: #ff8fab; color: white; cursor: pointer; z-index: 20; }
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes floatUp { 0% {transform: translateY(0) rotate(0);} 100% {transform: translateY(-110vh) rotate(360deg);} }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Il nostro viaggio 💖</h1>
+</header>
+
+<main>
+<div class="hearts" id="hearts"></div>
+
+<audio id="music" src="Quella foto di noi due.mp3" loop></audio>
+<button id="musicBtn" onclick="toggleMusic()">🎵 Pausa</button>
+
+<div id="intro">
+  <button onclick="startJourney()">Inizia il viaggio 💕</button>
+</div>
+
+<div id="moments" style="display:none;">
+  <h2>I nostri momenti speciali 💕</h2>
+  <div class="buttons-container" id="buttons-container"></div>
+  <div id="moments-container">
+
+    <div class="moment" id="moment-0">
+      <h3>💕 Fidanzamento 💕</h3>
+      <img src="foto/foto fidanzamento1.jpg" alt="foto fidanzamento1">
+      <img src="foto/foto fidanzamento2.jpg" alt="foto fidanzamento2">
+      <p>Era il 16 novembre 2024, il giorno in cui tutto è iniziato. Dopo circa un mesetto di uscite in cui venivo a Cesate in treno e poi mi facevo quasi mezz’ora a piedi pur di raggiungerti al parchetto, quel giorno mi sono finalmente deciso a venire con un mazzo di tre rose (l’oggi, il domani e il per sempre) e una letterina, dove per la prima volta ti ho scritto “Ti amo”, perché mi ero reso conto che, finalmente, amavo davvero una persona… e quella persona eri tu.
+
+Quel giorno ero molto ansioso: continuavo a tremare, sia per il freddo che per l’agitazione. Infatti, purtroppo, dopo averti fatto leggere la lettera, ho vomitato dall’emozione. Ma sono sicuro che questo particolare te lo ricordi bene, visto che da allora mi hai salvato sul telefono come “Vomitino” 
+
+Comunque, la foto in cui siamo ancora al parchetto, con te che tieni in mano il mazzo di rose, rimarrà per sempre una delle mie foto preferite, anche se la qualità è pessima e la nebbia di quel giorno rendeva tutto sfocato, per me resta perfetta, perché racchiude un momento che non dimenticherò mai.
+
+Ora passiamo al prossimo ricordo...</p>
+    </div>
+
+    <div class="moment" id="moment-1">
+      <h3>💕 Compleanno 💕</h3>
+      <img src="foto/foto compleanno1.webp" alt="foto compleanno1">
+      <img src="foto/foto compleanno2.jpg" alt="foto compleanno2">
+      <img src="foto/foto compleanno3.webp" alt="foto compleanno3">
+      <p>Era il 15 febbraio 2025, il giorno del tuo diciottesimo compleanno.
+Ho messo le mie due foto preferite di quella giornata: la prima è quella di noi due che ci baciamo, con te che tieni in mano la mia rosa, stampata in formato polaroid; la seconda è quella in cui sorridi mentre apri il mio regalo, quello che, senza alcun dubbio, rimarrà per me il miglior regalo della storia.
+
+Mi ricordo perfettamente quanto fossi bellissima quel giorno. Anche se lo sei sempre, in quella giornata c’era qualcosa di diverso: eri speciale.
+Forse perché era un momento importante, un traguardo, o forse perché in te ho visto, ancora più chiaramente, quella luce che amo da sempre.
+
+È lì che sei diventata una donna, anche se, come ti avevo scritto nella lettera di quel giorno, per me lo eri già da tempo.
+
+Ora passiamo al prossimo ricordo...</p>
+    </div>
+
+    <div class="moment" id="moment-2">
+      <h3>💕 Napoli 💕</h3>
+      <img src="foto/foto napoli1.webp" alt="foto napoli1">
+      <img src="foto/foto napoli2.webp" alt="foto napoli2">
+      <img src="foto/foto napoli3.jpg" alt="foto napoli3">
+      <img src="foto/foto napoli4.jpg" alt="foto napoli4">
+      <p>Siamo al 26, 27 e 28 febbraio 2025, i giorni della nostra gita a Napoli con la classe.
+Considerando che c'era pure la classe non è stato il viaggio perfetto, lo ammetto, ma è stato comunque speciale, perché è stata la nostra prima vacanzina insieme. E soprattutto, è stata la prima volta che abbiamo dormito abbracciati, stretti nel letto, nonostante la prof ci abbia ripetuto almeno una decina di volte di non stare nella stessa stanza.
+
+Nonostante tutto, ci siamo divertiti tantissimo. Abbiamo riso, camminato, scherzato… e, soprattutto, mangiato tanto, e ovviamente, tutto buonissimo, come solo a Napoli può essere.
+
+E siccome quella non è stata la nostra unica gita insieme…
+Passiamo al prossimo ricordo...</p>
+    </div>
+
+    <div class="moment" id="moment-3">
+      <h3>💕 Como 💕</h3>
+      <img src="foto/foto como1.webp" alt="foto como1">
+      <img src="foto/foto como2.webp" alt="foto como2">
+      <img src="foto/foto como3.webp" alt="foto como3">
+      <img src="foto/foto como4.jpg" alt="foto como4">
+      <img src="foto/foto como5.jpg" alt="foto como5">
+      <p>Era il 18 aprile 2025, e avevamo deciso di fare una gitella a Como.
+Volevamo passare una giornata in un posto carino, ma con i soldi contati abbiamo dovuto un po’ arrangiarci. Eppure, nonostante tutto, quella giornata è stata bellissima.
+
+Il giro sul lago, il sole che si rifletteva sull’acqua, e noi due semplicemente lì, insieme… è stato perfetto.
+Forse non serviva spendere tanto, perché a volte i momenti più belli sono proprio quelli più semplici.
+
+E poi, diciamocelo, a Milano non c’è poi così tanto da vedere, giusto?
+O forse, un posto carino in cui stare a Milano c’è...
+
+Passiamo al prossimo ricordo... </p>
+    </div>
+
+    <div class="moment" id="moment-4">
+      <h3>💕 Chinatown 💕</h3>
+      <img src="foto/foto chinatown1.webp" alt="foto chinatown1">
+      <img src="foto/foto chinatown2.webp" alt="foto chinatown2">
+      <img src="foto/foto chinatown3.webp" alt="foto chinatown3">
+      <p>Questo ricordo non ha una data precisa, perché ci siamo stati tantissime volte.
+E forse è proprio questo che lo rende speciale: non è un giorno, è un luogo. Il nostro posto.
+
+Ormai, per colpa tua, conosco ogni singolo negozio a memoria, ma nonostante questo non mi stanco mai di tornarci, perché quello che rende tutto bello sei tu.
+
+Tra tutti i momenti vissuti lì, però, ce n’è uno che porto nel cuore più di ogni altro: l’anello.
+Non perché fosse costoso o prezioso in sé, ma perché tu gli hai dato un valore emotivo immenso.
+Perché te l’ho dato io, e tu l’hai accolto come qualcosa di veramente importante.
+
+Vedertelo al dito, giorno dopo giorno, mi fa sorridere ogni volta.
+Perché, anche se non è nulla di straordinario, il fatto che tu lo tenga sempre con te mi fa capire una cosa semplice ma bellissima: che mi ami davvero.
+Ora passiamo al prossimo ricordo...</p>
+    </div>
+
+    <div class="moment" id="moment-5">
+      <h3>💕 Sushi 💕</h3>
+      <img src="foto/foto sushi1.webp" alt="foto sushi1">
+      <img src="foto/foto sushi2.jpg" alt="foto sushi2">
+      <img src="foto/foto sushi3.webp" alt="foto sushi3">
+      <p>Questo non è un singolo ricordo, ma un insieme di momenti legati a una passione che condividiamo e che, in un certo senso, ci rappresenta: il sushi. 
+
+Il sushi ci ha regalato tantissimi momenti felici, in posti diversi, ognuno con la sua atmosfera e il suo significato.
+Ma, tra tutti, ce ne sono tre che spiccano su tutti gli altri.
+
+Il primo è Hanabi, il nostro sushi per eccellenza.
+È lì che tutto è cominciato, dove ci siamo davvero innamorati del sushi.
+Nonostante sia a Porta Romana, quindi non proprio dietro l’angolo, ci torniamo spesso, perché quel posto ormai è diventato parte di noi.
+
+Poi c’è il TopPan, molto più vicino, ma altrettanto speciale.
+E come dimenticarlo? L’all you can eat a 10 euro ci ha salvato più di una volta e ci ha permesso di tornarci più volte e viverci tanti altri piccoli momenti insieme.
+
+E infine, il posto più importante di tutti: casa tua.
+Quel giorno in cui abbiamo comprato tutto il necessario e lo abbiamo cucinato noi, pezzo dopo pezzo, ridendo e pasticciando come sempre, con Pablo che continuava a fissarci sperando che noi gli dessimo qualcosa da mangiare.
+E, onestamente, tra tutti i sushi di Milano, il nostro non aveva nulla da invidiare a nessuno. 
+
+Ora passiamo al prossimo ricordo... </p>
+    </div>
+
+    <div class="moment" id="moment-6">
+      <h3>💕 Gardaland 💕</h3>
+      <img src="foto/foto gardaland1.webp" alt="foto gardaland1">
+      <img src="foto/foto gardaland2.webp" alt="foto gardaland2">
+      <img src="foto/foto gardaland3.webp" alt="foto gardaland3">
+      <img src="foto/foto gardaland4.webp" alt="foto gardaland4">
+      <p>Era il 12 giugno 2025, e quel giorno siamo stati a Gardaland… in compagnia di qualcuno.
+Un ricordo speciale, non solo perché ci siamo andati insieme, ma perché mi ha fatto sentire ancora più vicino alla tua famiglia.
+
+Anche se, come ben sai, ho sempre avuto paura delle giostre alte, quella volta ho deciso di venire solo per te.
+E ti devo davvero ringraziare, perché, almeno in parte, sei riuscita a farmela superare.
+Anche se, lo ammetto, non scorderò mai quei nomi che ormai mi fanno vomitare solo a sentirli: Oblivion, Raptor e tutti gli altri… nomi che spero di non risentire mai più in tutta la mia vita 
+
+Ma come dimenticare invece le granite colorate, il pranzo al fast food e tutte le risate di quella giornata?
+Il motivo per cui questo ricordo è così importante, però, va oltre tutto questo:
+quel giorno siamo tornati entrambi bambini, a ridere, scherzare e andare sulle giostre insieme.
+E proprio per questo, quel giorno, il nostro legame si è rafforzato ancora di più. </p>
+    </div>
+
+    <div class="moment" id="moment-7">
+      <h3>💕 Cinema 💕</h3>
+      <img src="foto/foto cinema1.webp" alt="foto cinema1">
+      <img src="foto/foto cinema2.webp" alt="foto cinema2">
+      <img src="foto/foto cinema3.webp" alt="foto cinema3">
+      <p>Questo è un altro insieme di ricordi, legati a uno dei nostri posti preferiti in assoluto: il cinema. 
+Qui abbiamo vissuto tantissime emozioni diverse, a seconda del film.
+
+Abbiamo riso con il film di Angelo Duro,
+abbiamo pianto con Venom,
+e siamo rimasti a bocca aperta davanti alla bellezza di Dragon Trainer.
+Proprio quel film, tra l’altro, è diventato un ricordo importante un po’ per caso: all’inizio eravamo andati solo per prendere la mappa a tua sorella, e alla fine ci siamo innamorati del film e del gadget. 
+
+E, come da tradizione, tra un film e l’altro non poteva mancare la nostra attività preferita: mangiare 
+
+Ma non ci sono solo i cinema: anche i film visti insieme da casa, in chiamata, sono diventati dei ricordi preziosi.
+Ognuno di essi ci lega in modo particolare: alcuni ci hanno fatto ridere, altri ci hanno emozionato, altri ancora tornare bambini.
+E tra tutti, alcuni ormai fanno parte di noi come Harry Potter e Toy Story, che non sono solo film o saghe ma momenti condivisi, che ci legheranno per sempre.
+
+Ora passiamo al prossimo ricordo... </p>
+    </div>
+
+    <div class="moment" id="moment-8">
+      <h3>💕 Chiasso 💕</h3>
+      <img src="foto/foto chiasso1.webp" alt="foto chiasso1">
+      <img src="foto/foto chiasso2.webp" alt="foto chiasso2">
+      <img src="foto/foto chiasso3.webp" alt="foto chiasso3">
+      <img src="foto/foto chiasso4.jpg" alt="foto chiasso4">
+      <img src="foto/foto chiasso5.webp" alt="foto chiasso5">
+      <img src="foto/foto chiasso6.webp" alt="foto chiasso6">
+      <img src="foto/foto chiasso7.webp" alt="foto chiasso7">
+      <img src="foto/foto chiasso8.webp" alt="foto chiasso8">
+      <img src="foto/foto chiasso9.webp" alt="foto chiasso9">
+      <img src="foto/foto chiasso10.webp" alt="foto chiasso10">
+      <img src="foto/foto chiasso11.webp" alt="foto chiasso11">
+      <p>Siamo arrivati alla fine di questi ricordi con il 6 settembre 2025, la gita a Chiasso.
+Secondo me, la gita più bella, perché anche se non ci siamo fermati a dormire, quella giornata è stata davvero speciale.
+
+Siamo andati in Svizzera, che è ormai diventata uno dei nostri posti preferiti, e ci siamo subito innamorati di quanto fosse tutto pulito e ordinato.
+Ma, come ben sai, non ci siamo limitati a vedere la città con i suoi parchetti e le vie curate: abbiamo voluto vivere la natura del posto.
+
+Siamo arrivati alle gole della Breggia, dove ci siamo tuffati nell’acqua gelata del fiume, dopo esserci gustati i nostri tramezzini e aver bevuto la nostra bella Brasilena.
+Sinceramente, è un’esperienza che rifarei mille volte.
+
+Oltre al bagno e al nostro fedele amico cibo, abbiamo ammirato il panorama dopo una lunga camminata, e abbiamo visto molte cose durante il percorso come il cementificio o la statua della Madonna, che hanno aggiunto qualcosa di unico e speciale al ricordo.
+
+A mio parere, è stata la nostra migliore gita fino ad ora, ma ti posso assicurare che non è stata l’ultima…
+
+Ora passiamo alla parte finale di questi ricordi…</p>
+    </div>
+
+    <div class="moment" id="moment-9">
+      <h3>💕 Foto Preferite 💕</h3>
+      <img src="foto/foto nostre1.webp" alt="foto nostre1">
+      <img src="foto/foto nostre3.webp" alt="foto nostre3">
+      <img src="foto/foto nostre4.webp" alt="foto nostre4">
+      <img src="foto/foto nostre5.webp" alt="foto nostre5">
+      <p>Questa è l’ultima parte dei ricordi, o forse no… 
+Hai visto cos’è spuntato? Ci arriviamo dopo…
+
+Su queste foto non c’è moltissimo da dire, eppure sono le mie preferite.
+Non perché siamo venuti bene, ma perché ognuna ha un ricordo importante dietro e ogni volta che le riguardo, sorrido.
+
+Ho fatto questa parte breve perché so che sei curiosa per l’ultima parte…
+E finalmente posso dire:
+
+Ora passiamo alla sorpresa finale… 
+</p>
+    </div>
+
+  </div>
+</div>
+
+<div id="finale">
+  <h2>Per te, Titu mia 💕</h2>
+  <p>Amore mio,
+
+mentre scrivo queste righe, non posso fare a meno di ripensare a tutti i momenti incredibili che abbiamo condiviso in questo anno insieme e ad emozionarmi un pochino. Dal 16 novembre, il giorno in cui ti ho detto per la prima volta “Ti amo”, fino a oggi, ogni attimo con te è stato un regalo unico, una piccola magia che ha reso la mia vita infinitamente più bella, ovviamente tra alti e bassi, ma forse anche questo ha reso unico tutto questo.
+
+Ricordo ancora il tuo sorriso quel giorno al parchetto, il mazzo di rose stretto tra le tue mani, e come il mondo sembrasse fermarsi mentre leggevi quella lettera. Ricordo il tuo 18° compleanno, quando la tua gioia illuminava tutto, e io capivo quanto fossi speciale per me. Le nostre prime vacanze insieme, Napoli, Como, Chiasso, le risate, i pasti condivisi, le passeggiate improvvisate… ogni ricordo mi ricorda quanto siamo perfetti insieme.
+
+Abbiamo condiviso momenti ma soprattutto passioni.
+Ogni esperienza, anche la più semplice, con te diventa speciale.
+
+Ma quello che voglio dire davvero, amore mio, è che questo anno insieme è stato il più bello della mia vita. Ho imparato cos’è l’amore vero, la complicità, la gioia pura di condividere ogni giorno con te. Ho imparato a ridere di più, a godermi le piccole cose, a sentirmi a casa in un abbraccio. Ho scoperto quanto sia incredibile avere qualcuno che ti conosce, ti accetta, ti ama con tutti i tuoi pregi e difetti.
+
+Ogni giorno con te è stata una scoperta: i nostri scherzi, le chiacchierate infinite, le maratone di film, i nostri viaggi, le nostre piccole abitudini… tutto ha reso questo anno indimenticabile. Non ci sono parole che possano descrivere davvero quanto mi senta fortunato ad averti accanto.
+
+Guardando indietro a tutti questi ricordi, capisco quanto siamo cresciuti insieme, quanto abbiamo condiviso e quanto ancora ci aspetta. E se potessi racchiudere in una frase tutto ciò che sento, direi semplicemente: grazie di esistere, avermi aiutato a non mollare a scuola, grazie di esserci sempre stata nei momenti in cui stavo male, grazie per esserci sempre stata per me anche quando tutti se ne andavano, grazie per aver resto questo anno incredibile, grazie per essere tu, il mio amore, la mia casa, il mio tutto.
+
+Ad un anno di distanza riconfermo il messaggio delle mie rose, festeggiamo per oggi, per domani e per sempre.
+
+Con tutto il mio cuore,
+il tuo Titu. 💕</p>
+  <button onclick="restart()">Ricomincia il viaggio</button>
+</div>
+</main>
+
+<script>
+const sections = ["Fidanzamento","Compleanno","Napoli","Como","Chinatown","Sushi","Gardaland","Cinema","Chiasso","Foto Preferite"];
+let visited = Array(sections.length).fill(false);
+const music = document.getElementById('music');
+const musicBtn = document.getElementById('musicBtn');
+
+function startJourney() {
+  document.getElementById('intro').style.display = 'none';
+  document.getElementById('moments').style.display = 'block';
+  generateHearts();
+  generateButtons();
+  music.play().catch(e=>console.log("Autoplay bloccato:", e));
+}
+
+function toggleMusic() {
+  if(music.paused){ music.play(); musicBtn.textContent = "🎵 Pausa"; }
+  else { music.pause(); musicBtn.textContent = "🎵 Riprendi"; }
+}
+
+function generateButtons() {
+  const container = document.getElementById('buttons-container');
+  container.innerHTML = "";
+  sections.forEach((name,index)=>{
+    const btn = document.createElement('button');
+    btn.textContent = name;
+    btn.id = "btn-"+index;
+    btn.onclick = ()=>showMoment(index);
+    if(index!==0) btn.disabled=true;
+    container.appendChild(btn);
+  });
+  const finaleBtn = document.createElement('button');
+  finaleBtn.id="finaleBtn";
+  finaleBtn.textContent="💕 e ora una sorpresina.. 💕";
+  finaleBtn.onclick=showFinale;
+  container.appendChild(finaleBtn);
+}
+
+function showMoment(index){
+  document.querySelectorAll('.moment').forEach(m=>m.style.display='none');
+  document.getElementById('moment-'+index).style.display='block';
+  visited[index]=true;
+  if(index<sections.length-1) document.getElementById('btn-'+(index+1)).disabled=false;
+  else document.getElementById('finaleBtn').classList.add('showFinaleBtn');
+}
+
+function showFinale(){
+  document.getElementById('moments').style.display='none';
+  document.getElementById('finale').style.display='block';
+}
+
+function restart(){
+  document.getElementById('finale').style.display='none';
+  document.getElementById('moments').style.display='block';
+  visited.fill(false);
+  document.querySelectorAll('.moment').forEach(m=>m.style.display='none');
+  sections.forEach((s,i)=>document.getElementById('btn-'+i).disabled=i!==0);
+  document.getElementById('finaleBtn').classList.remove('showFinaleBtn');
+}
+
+function generateHearts(){
+  const heartsContainer=document.getElementById('hearts');
+  setInterval(()=>{
+    const heart=document.createElement('div');
+    heart.classList.add('heart');
+    heart.style.left=Math.random()*100+'%';
+    heart.style.fontSize=(15+Math.random()*20)+'px';
+    heart.textContent='💕';
+    heartsContainer.appendChild(heart);
+    setTimeout(()=>heart.remove(),6000);
+  },500);
+}
+</script>
+
+</body>
+</html>
